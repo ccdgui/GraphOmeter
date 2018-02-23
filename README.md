@@ -1,5 +1,5 @@
 # GraphOmeter
-## Graph modeling and representation of patient interactions on a health forum. 
+## Graph presentation of patient interactions inside a Health Forum. 
 
 ### Overview 
 
