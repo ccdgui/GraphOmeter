@@ -5,9 +5,8 @@ import matplotlib.pyplot as plt
 with open('/home/StrobiHealth/GraphOmeter/graph.json') as json_data:
     forum_data = json.load(json_data)
     
-#based on json data from the scaper creates nodes and edges and returns dictionary 
+# step 1: based on source json data this function creates nodes and edges and returns a graph dictionary 
 def graph_parser(forum_data): 
-    
     graph = dict()
     for vertex in forum_data: 
         node = vertex['node1']
@@ -22,6 +21,7 @@ def graph_parser(forum_data):
             graph[node].append(edge)
     return graph
 
+# step 2: the class object Graph has 3 main methods: call (generate edges), incoming (compute number of incoming edges) and summarize. 
 class Graph(object):
     def __init__(self, input_dict):
         self.input_dict = input_dict
@@ -70,5 +70,3 @@ class Graph(object):
                 print("{} --> {} outcoming edges and {} incoming edges".format(node[0],len(outcoming),len(incoming)))
         self.plot_graph(val_map)
         print("node color code based on number of outcoming edges. yellow: 2, orange: 3, red: 4 or more")
-
-
