@@ -17,7 +17,7 @@ The script graph_generator.py contains two main elements:
 
   * graph_parser: this function parses the source json data, creates nodes and edges and returns dictionary. 
 
-  * Class Object Graph: Object generates a Graph object using the networkx python package. 
+  * Class Object Graph: Object generates a Graph object using the networkx python package. Methods attached to this object: 
      * call() object generates graph edges using the 'add_edges_from()' helper function. 
      * incoming() method return a list of income edge for the node passed as argument.
      * plot_graph() generate parameters for plotting the grap. The val_map dictionary contain color parameter for each node 
