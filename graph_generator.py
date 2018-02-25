@@ -29,21 +29,21 @@ class Graph(object):
         self.neighbors = input_dict.values()
         self.graph = nx.Graph()
  
-    def __call__(self): 
+    def __call__(self): #generate outcoming edges (i.e. message sent by one participant to another)
         edge_list = []
         for node in self.input_dict:
             for neighbour in self.input_dict[node]:
                 edge_list.append((node, neighbour))
         self.graph.add_edges_from(edge_list)  
  
-    def incoming(self, node): 
+    def incoming(self, node): #for node passed as argument, returns a list of corresponding incoming edges (i.e. message recieved  by the node)
         in_coming = []
         for item in self.nodes:
             if node in item[1]: 
                 in_coming.append(item[0])
         return in_coming 
     
-    def plot_graph(self, val_map): 
+    def plot_graph(self, val_map): #flag most active participants in the network with a color code 
         display_graph = self.graph
         print(display_graph)
         #print(self.nodes)
