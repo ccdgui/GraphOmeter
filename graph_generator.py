@@ -43,7 +43,7 @@ class Graph(object):
                 in_coming.append(item[0])
         return in_coming 
     
-    def plot_graph(self, val_map): #flag most active participants in the network with a color code 
+    def plot_graph(self, val_map): #generate parameters for plotting the graph 
         display_graph = self.graph
         print(display_graph)
         #print(self.nodes)
@@ -55,7 +55,7 @@ class Graph(object):
         nx.draw(display_graph, cmap=plt.get_cmap('jet'), node_color=values, **options)
         plt.show()  
 
-    def summarize(self):
+    def summarize(self): #flag most active participants in the network with a color code 
         val_map = {}
         print("Most active forum participants:")
         for node in self.nodes:
