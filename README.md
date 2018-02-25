@@ -19,6 +19,10 @@ The script graph_generator.py contains two main elements:
 
   * Class Object Graph: Object generates a Graph object using the networkx python package. 
         Call() object generates graph edges using the 'add_edges_from()' helper function. 
-        Incoming() method return a list of income edge for the node passed as argument. 
+        
+        Incoming() method return a list of income edge for the node passed as argument.
+        
+        plot_graph() generate parameters for plotting the grap. The val_map dictionary contain color parameter for each node 
+        
         summarize() method flags the most active nodes in the graph (2 outcoming edges or more) with a color code (yellow, orange, red)           and plots network graph. 
   
